@@ -131,6 +131,7 @@ DJOSER = {
     }
 }
 
+ALLOWED_HOSTS = ["0.0.0.0", "localhost"]
 
 AUTH_USER_MODEL = "core.User"
 
