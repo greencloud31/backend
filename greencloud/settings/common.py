@@ -15,19 +15,11 @@ from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x@rgo8^jy#fy@kc+j+r%lhsu_0=+u=m4b8&6uo*=5+2#$^-cjp'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,17 +67,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'greencloud.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
@@ -154,26 +135,10 @@ DJOSER = {
 AUTH_USER_MODEL = "core.User"
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://dms-g10-qa.herokuapp.com",
+    "https://dms-g10-qa.herokuapp.com",
 ]
 
-CORS_ALLOW_HEADERS = [
-    "x-auth-token",
-    "content-type",
-    "Authorization"
-]
-
-DEBUG = True
-
-SECRET_KEY = (
-    "django-insecure-v0q%9hsdzu$yj@2zq&%*x$(ti+ob7vbml=ykl2ft^z=-_yb9g+"
-)
-
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+CORS_ALLOW_HEADERS = ["*"]
