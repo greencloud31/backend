@@ -50,7 +50,7 @@ server {
         }
 
         location /static/ {
-           alias /home/ubuntu/backend/static/;
+           alias /backend/static/;
         }
 
         # pass PHP scripts to FastCGI server
