@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path("", views.root),
+    path("convert/", views.convert),
 ]
