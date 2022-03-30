@@ -135,11 +135,6 @@ ALLOWED_HOSTS = ["0.0.0.0", "localhost"]
 
 AUTH_USER_MODEL = "core.User"
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://dms-g10-qa.herokuapp.com",
-    "https://dms-g10-qa.herokuapp.com",
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_HEADERS = ["*"]
