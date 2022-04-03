@@ -11,6 +11,7 @@ djangorestframework-simplejwt = "*"
 mysqlclient = "*"
 gunicorn = "*"
 django-cors-headers = "*"
+boto3 = "*"
 
 [dev-packages]
 
